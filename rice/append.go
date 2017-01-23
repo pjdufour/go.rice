@@ -28,7 +28,7 @@ func operationAppend(pkgs []*build.Package) {
 	// This is actually not required, the append command now has the option --exec required.
 	// // check if package is a command
 	// if !pkg.IsCommand() {
-	// 	fmt.Println("Error: can not append to non-main package. Please follow instructions at github.com/GeertJohan/go.rice")
+	// 	fmt.Println("Error: can not append to non-main package. Please follow instructions at github.com/pjdufour/go.rice")
 	// 	os.Exit(1)
 	// }
 

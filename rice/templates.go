@@ -15,7 +15,7 @@ func init() {
 	tmplEmbeddedBox, err = template.New("embeddedBox").Parse(`package {{.Package}}
 
 import (
-	"github.com/GeertJohan/go.rice/embedded"
+	"github.com/pjdufour/go.rice/embedded"
 	"time"
 )
 
@@ -26,7 +26,7 @@ func init() {
 	{{range .Files}}{{.Identifier}} := &embedded.EmbeddedFile{
 		Filename:    ` + "`" + `{{.FileName}}` + "`" + `,
 		FileModTime: time.Unix({{.ModTime}}, 0),
-		Content:     string({{.Content | printf "%q"}}), 
+		Content:     string({{.Content | printf "%q"}}),
 	}
 	{{end}}
 

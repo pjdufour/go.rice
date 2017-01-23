@@ -54,7 +54,7 @@ func TestFindOneBox(t *testing.T) {
 			[]byte(`package main
 
 import (
-	"github.com/GeertJohan/go.rice"
+	"github.com/pjdufour/go.rice"
 )
 
 func main() {
@@ -84,7 +84,7 @@ func TestFindOneBoxViaVariable(t *testing.T) {
 			[]byte(`package main
 
 import (
-	"github.com/GeertJohan/go.rice"
+	"github.com/pjdufour/go.rice"
 )
 
 func main() {
@@ -116,7 +116,7 @@ func TestFindMultipleBoxes(t *testing.T) {
 			[]byte(`package main
 
 import (
-	"github.com/GeertJohan/go.rice"
+	"github.com/pjdufour/go.rice"
 )
 
 func main() {
@@ -175,7 +175,7 @@ func TestUnrelatedBoxesAreNotFound(t *testing.T) {
 			[]byte(`package foobar
 
 import (
-	_ "github.com/GeertJohan/go.rice"
+	_ "github.com/pjdufour/go.rice"
 )
 
 type fakerice struct {}
@@ -190,7 +190,7 @@ func FindBox(s string) {
 func LoadBoxes() {
 	rice := fakerice{}
 	rice.FindBox("foo")
-	
+
 	FindBox("bar")
 }
 `),
@@ -217,7 +217,7 @@ func TestMixGoodAndBadBoxes(t *testing.T) {
 			[]byte(`package foobar
 
 import (
-	_ "github.com/GeertJohan/go.rice"
+	_ "github.com/pjdufour/go.rice"
 )
 
 type fakerice struct {}
@@ -232,7 +232,7 @@ func FindBox(s string) {
 func LoadBoxes1() {
 	rice := fakerice{}
 	rice.FindBox("foo")
-	
+
 	FindBox("bar")
 }
 `),
@@ -242,7 +242,7 @@ func LoadBoxes1() {
 			[]byte(`package foobar
 
 import (
-	noodles "github.com/GeertJohan/go.rice"
+	noodles "github.com/pjdufour/go.rice"
 )
 
 func LoadBoxes2() {
@@ -256,7 +256,7 @@ func LoadBoxes2() {
 			[]byte(`package foobar
 
 import (
-	"github.com/GeertJohan/go.rice"
+	"github.com/pjdufour/go.rice"
 )
 
 func LoadBoxes3() {
@@ -269,7 +269,7 @@ func LoadBoxes3() {
 			[]byte(`package foobar
 
 import (
-	. "github.com/GeertJohan/go.rice"
+	. "github.com/pjdufour/go.rice"
 )
 
 func LoadBoxes3() {

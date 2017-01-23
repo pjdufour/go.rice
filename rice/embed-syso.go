@@ -13,7 +13,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/GeertJohan/go.rice/embedded"
+	"github.com/pjdufour/go.rice/embedded"
 	"github.com/akavel/rsrc/coff"
 )
 
@@ -43,7 +43,7 @@ import "C"
 import (
 	"bytes"
 	"encoding/gob"
-	"github.com/GeertJohan/go.rice/embedded"
+	"github.com/pjdufour/go.rice/embedded"
 	"unsafe"
 )
 
